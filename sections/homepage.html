@@ -85,12 +85,14 @@
 
   .ohc-h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 7vw, 88px);
+    font-size: clamp(32px, 5vw, 64px);
     font-weight: 900; line-height: 1.05;
+    white-space: nowrap;
     color: #f8f4ff; margin: 0 auto 16px;
     max-width: 1000px; width: 100%;
     position: relative; z-index: 2;
   }
+  @media (max-width: 480px) { .ohc-h1 { white-space: normal; font-size: 32px; } }
   .ohc-h1 em {
     font-style: italic;
     background: linear-gradient(135deg, #d946ef, #a855f7);
@@ -103,14 +105,15 @@
   }
 
   .ohc-avatar-wrap {
-    position: relative; z-index: 2; margin-bottom: 0;
+    position: relative; z-index: 2; margin-bottom: -8px;
+    width: 100%; max-width: 420px;
   }
   .ohc-avatar-wrap img {
-    width: 160px; height: 160px;
-    border-radius: 50%; object-fit: cover;
-    border: 3px solid rgba(217,70,239,0.5);
-    box-shadow: 0 0 40px rgba(217,70,239,0.4), 0 0 80px rgba(107,33,168,0.2);
-    display: block; margin: 0 auto;
+    width: 100%; display: block;
+    object-fit: cover; object-position: top;
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    filter: drop-shadow(0 0 40px rgba(217,70,239,0.35)) drop-shadow(0 0 80px rgba(107,33,168,0.25));
   }
 
   /* ── VIDEO ── */
@@ -287,23 +290,21 @@
     <div class="ohc-stars-2"></div>
     <div class="ohc-nebula"></div>
 
-    <div class="ohc-name-tag">Olly Henson Coaching</div>
-
     <h1 class="ohc-h1">
-      Activating the<br><em>World's Heart.</em>
+      Activating the <em>World's Heart.</em>
     </h1>
 
     <p class="ohc-tagline">Helping people move out of their heads and into the creative power of their heart.</p>
 
     <div class="ohc-avatar-wrap">
-      <img src="https://assets.cdn.filesafe.space/LRqVZmxns8f3xcJLHzBK/media/6a2b0038e5084c4b718e68e7.png" alt="Olly Henson"/>
+      <img src="https://assets.cdn.filesafe.space/LRqVZmxns8f3xcJLHzBK/media/66fb0556c6718b53f92c9394.png" alt="Olly Henson"/>
     </div>
   </div>
 
   <!-- VIDEO -->
   <div class="ohc-video-wrap">
     <p class="ohc-video-label">Watch</p>
-    <h2 class="ohc-video-title">Who is <em>Olly Henson?</em></h2>
+    <h2 class="ohc-video-title">A bit more <em>about me</em></h2>
 
     <div class="ohc-video-container">
       <!-- Replace PLACEHOLDER_VIDEO_URL with your YouTube embed URL -->
@@ -325,7 +326,7 @@
     <div class="ohc-cta-grid">
 
       <!-- Free Meditation -->
-      <a href="https://ollyhenson.com/meditation" target="_blank" rel="noopener" class="ohc-cta-card">
+      <a href="https://ollyhenson.com/meditation" class="ohc-cta-card">
         <div class="ohc-cta-icon icon-med">
           <svg viewBox="0 0 24 24" fill="none" stroke="#d946ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
@@ -333,7 +334,7 @@
           </svg>
         </div>
         <div class="ohc-cta-name">Free Meditation</div>
-        <div class="ohc-cta-desc">Get your free Heart Activation Meditation</div>
+        <div class="ohc-cta-desc">Download your free Heart Activation Meditation audio</div>
       </a>
 
       <!-- YouTube -->
@@ -344,7 +345,7 @@
           </svg>
         </div>
         <div class="ohc-cta-name">YouTube</div>
-        <div class="ohc-cta-desc">Watch free content on healing and creativity</div>
+        <div class="ohc-cta-desc">Watch longer and deeper content on heart activation</div>
       </a>
 
       <!-- Instagram -->
@@ -355,11 +356,11 @@
           </svg>
         </div>
         <div class="ohc-cta-name">Instagram</div>
-        <div class="ohc-cta-desc">Daily inspiration and behind the scenes</div>
+        <div class="ohc-cta-desc">Learn how to activate the power of your heart on-the-go</div>
       </a>
 
       <!-- Skool -->
-      <a href="https://www.skool.com/the-healing-code-8609" target="_blank" rel="noopener" class="ohc-cta-card">
+      <a href="https://ollyhenson.com/coaching-application" class="ohc-cta-card">
         <div class="ohc-cta-icon icon-sk">
           <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -368,8 +369,8 @@
             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
-        <div class="ohc-cta-name">Free Community</div>
-        <div class="ohc-cta-desc">Join The Healing Code on Skool</div>
+        <div class="ohc-cta-name">Heart Creator Program</div>
+        <div class="ohc-cta-desc">Become the creator of your reality</div>
       </a>
 
     </div>
@@ -417,3 +418,8 @@
   </footer>
 
 </div>
+
+<script
+  src="https://link.kourse.com/js/external-tracking.js"
+  data-tracking-id="tk_068191bb481e45768fdbfea82d7d1b59">
+</script>
