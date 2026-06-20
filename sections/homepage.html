@@ -1,7 +1,7 @@
 <!-- HOMEPAGE | Olly Henson Coaching — ollyhenson.com -->
 <!-- GHL: One Custom HTML block. Section + column padding/margin = 0. Full Width. -->
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
   html, body { margin: 0 !important; padding: 0 !important; overflow-x: hidden !important; }
@@ -58,12 +58,12 @@
   .ohc-nebula {
     position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
     width: 1000px; height: 600px; pointer-events: none;
-    background: radial-gradient(ellipse, rgba(107,33,168,0.2) 0%, rgba(88,28,135,0.08) 40%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(107,33,168,0.07) 0%, rgba(88,28,135,0.03) 40%, transparent 70%);
     animation: nebula-pulse 6s ease-in-out infinite;
   }
   @keyframes nebula-pulse {
-    0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.7; }
-    50%       { transform: translateX(-50%) scale(1.08); opacity: 1; }
+    0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+    50%       { transform: translateX(-50%) scale(1.08); opacity: 0.8; }
   }
 
   /* ── HERO ── */
@@ -79,29 +79,24 @@
   .ohc-name-tag {
     display: inline-block; position: relative; z-index: 2;
     font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
-    color: #d946ef; border: 1px solid rgba(217,70,239,0.4);
+    color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.25);
     padding: 5px 16px; border-radius: 50px; margin-bottom: 24px;
   }
 
   .ohc-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 64px);
-    font-weight: 900; line-height: 1.05;
-    white-space: nowrap;
-    color: #f8f4ff; margin: 0 auto 16px;
-    max-width: 1000px; width: 100%;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(56px, 8vw, 110px);
+    font-weight: 400; line-height: 1.1;
+    color: #f8f4ff; margin: 0 auto 8px;
+    width: 100%;
     position: relative; z-index: 2;
   }
-  @media (max-width: 480px) { .ohc-h1 { white-space: normal; font-size: 32px; } }
-  .ohc-h1 em {
-    font-style: italic;
-    background: linear-gradient(135deg, #d946ef, #a855f7);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  }
+  .ohc-mobile-br { display: none; }
 
   .ohc-tagline {
-    font-size: clamp(16px, 2vw, 22px); color: #c4b5fd; line-height: 1.6;
+    font-size: clamp(13px, 1.5vw, 18px); color: rgba(255,255,255,0.75); line-height: 1.6;
     max-width: 580px; margin: 0 auto 40px; position: relative; z-index: 2;
+    font-style: normal; letter-spacing: 3px; text-transform: uppercase; font-weight: 500;
   }
 
   .ohc-avatar-wrap {
@@ -113,7 +108,7 @@
     object-fit: cover; object-position: top;
     mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-    filter: drop-shadow(0 0 40px rgba(217,70,239,0.35)) drop-shadow(0 0 80px rgba(107,33,168,0.25));
+    filter: drop-shadow(0 0 40px rgba(255,255,255,0.2)) drop-shadow(0 0 80px rgba(255,255,255,0.1));
   }
 
   /* ── VIDEO ── */
@@ -124,7 +119,7 @@
   }
   .ohc-video-label {
     font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
-    color: #d946ef; margin-bottom: 16px;
+    color: rgba(255,255,255,0.6); margin-bottom: 16px;
   }
   .ohc-video-title {
     font-family: 'Playfair Display', serif;
@@ -135,30 +130,13 @@
   .ohc-video-container {
     position: relative; max-width: 760px; margin: 0 auto;
     border-radius: 20px; overflow: hidden;
-    box-shadow: 0 0 60px rgba(217,70,239,0.3), 0 0 120px rgba(107,33,168,0.2);
-    border: 1px solid rgba(168,85,247,0.2);
+    box-shadow: 0 0 60px rgba(255,255,255,0.12), 0 0 120px rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
   }
-  .ohc-video-container iframe {
+  .ohc-video-container video {
     width: 100%; aspect-ratio: 16/9;
     display: block; border: none;
-  }
-
-  /* placeholder when no video yet */
-  .ohc-video-placeholder {
-    width: 100%; aspect-ratio: 16/9;
-    background: linear-gradient(135deg, #1a0535, #0f0025);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 16px;
-  }
-  .ohc-video-placeholder-icon {
-    width: 72px; height: 72px; border-radius: 50%;
-    background: rgba(217,70,239,0.15); border: 2px solid rgba(217,70,239,0.4);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .ohc-video-placeholder-icon svg { width: 28px; height: 28px; fill: #d946ef; margin-left: 4px; }
-  .ohc-video-placeholder p {
-    font-size: 14px; color: rgba(196,181,253,0.6); margin: 0;
+    background: #000;
   }
 
   /* ── CTAs ── */
@@ -166,17 +144,17 @@
     background: #080010;
     padding: 64px 40px;
     text-align: center;
-    border-top: 1px solid rgba(168,85,247,0.1);
+    border-top: 1px solid rgba(255,255,255,0.08);
   }
   .ohc-ctas-eyebrow {
     font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
-    color: #d946ef; margin-bottom: 14px;
+    color: rgba(255,255,255,0.6); margin-bottom: 14px;
   }
   .ohc-ctas h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(24px, 3.5vw, 42px); color: #f8f4ff; font-weight: 700; margin-bottom: 40px;
   }
-  .ohc-ctas h2 em { font-style: italic; color: #a855f7; }
+  .ohc-ctas h2 em { font-style: normal; color: #a855f7; }
 
   .ohc-cta-grid {
     display: grid;
@@ -186,7 +164,7 @@
 
   .ohc-cta-card {
     background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(168,85,247,0.2);
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: 18px; padding: 28px 20px;
     text-decoration: none; color: #f8f4ff;
     display: flex; flex-direction: column;
@@ -195,8 +173,8 @@
   }
   .ohc-cta-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(107,33,168,0.3);
-    border-color: rgba(217,70,239,0.5);
+    box-shadow: 0 12px 40px rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.3);
   }
 
   .ohc-cta-icon {
@@ -273,7 +251,8 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
     .ohc-hero { padding: 60px 20px 56px; }
-    .ohc-h1 { font-size: 36px; }
+    .ohc-h1 { font-size: 72px !important; }
+    .ohc-tagline { font-size: 13px !important; letter-spacing: 2px; max-width: 260px !important; }
     .ohc-video-wrap { padding: 48px 20px; }
     .ohc-ctas { padding: 48px 20px; }
     .ohc-testi { padding: 48px 20px; }
@@ -290,43 +269,36 @@
     <div class="ohc-stars-2"></div>
     <div class="ohc-nebula"></div>
 
-    <h1 class="ohc-h1">
-      Activating the <em>World's Heart.</em>
-    </h1>
+    <h1 class="ohc-h1">Olly Henson</h1>
 
-    <p class="ohc-tagline">Helping people move out of their heads and into the creative power of their heart.</p>
+    <p class="ohc-tagline">Activating The World's <span style="color:#a855f7;">Heart</span></p>
 
     <div class="ohc-avatar-wrap">
-      <img src="https://assets.cdn.filesafe.space/LRqVZmxns8f3xcJLHzBK/media/66fb0556c6718b53f92c9394.png" alt="Olly Henson"/>
+      <img src="https://assets.cdn.filesafe.space/LRqVZmxns8f3xcJLHzBK/media/6a2ff592e5b9322bddd1e8d7.png" alt="Olly Henson"/>
     </div>
   </div>
 
   <!-- VIDEO -->
   <div class="ohc-video-wrap">
     <p class="ohc-video-label">Watch</p>
-    <h2 class="ohc-video-title">A bit more <em>about me</em></h2>
+    <h2 class="ohc-video-title">A bit more about <span style="color:#a855f7; font-style:normal;">me</span></h2>
 
     <div class="ohc-video-container">
-      <!-- Replace PLACEHOLDER_VIDEO_URL with your YouTube embed URL -->
-      <!-- e.g. https://www.youtube.com/embed/YOUR_VIDEO_ID -->
-      <div class="ohc-video-placeholder">
-        <div class="ohc-video-placeholder-icon">
-          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <p>Video coming soon</p>
-      </div>
+      <video controls playsinline preload="metadata">
+        <source src="https://assets.cdn.filesafe.space/LRqVZmxns8f3xcJLHzBK/media/6a368bcb6a6dd1b69a4dd0f2.mov" type="video/mp4">
+      </video>
     </div>
   </div>
 
   <!-- CTAs -->
   <div class="ohc-ctas">
     <p class="ohc-ctas-eyebrow">Connect with Olly</p>
-    <h2>Where would you like<br><em>to go next?</em></h2>
+    <h2>Where would you like<br>to go <span style="color:#a855f7;">next?</span></h2>
 
     <div class="ohc-cta-grid">
 
       <!-- Free Meditation -->
-      <a href="https://ollyhenson.com/meditation" class="ohc-cta-card">
+      <a href="https://ollyhenson.com/meditation?utm_source=website&utm_medium=homepage&utm_campaign=meditation" class="ohc-cta-card">
         <div class="ohc-cta-icon icon-med">
           <svg viewBox="0 0 24 24" fill="none" stroke="#d946ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
@@ -360,7 +332,7 @@
       </a>
 
       <!-- Skool -->
-      <a href="https://ollyhenson.com/coaching-application" class="ohc-cta-card">
+      <a href="https://ollyhenson.com/coaching-application?utm_source=website&utm_medium=homepage&utm_campaign=coaching" class="ohc-cta-card">
         <div class="ohc-cta-icon icon-sk">
           <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -411,8 +383,8 @@
   <!-- FOOTER -->
   <footer class="ohc-footer">
     <nav class="ohc-footer-links">
-      <a href="PLACEHOLDER_PRIVACY_POLICY_URL" target="_blank" rel="noopener">Privacy Policy</a>
-      <a href="PLACEHOLDER_TERMS_URL" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+      <a href="https://ollyhenson.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://ollyhenson.com/terms" target="_blank" rel="noopener">Terms &amp; Conditions</a>
     </nav>
     <p class="ohc-footer-copy">&copy; 2026 Olly Henson Coaching. All rights reserved.</p>
   </footer>
